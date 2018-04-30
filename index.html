@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Commando</title>
+    
+    <link href="lib/jquery.terminal.css" rel="stylesheet" />
+    
+    <script src="lib/jquery-3.2.1.js"></script>
+    <script src="lib/jquery.terminal.js"></script>
+    
+</head>
+<body>
+<script>
+
+$(function() {
+    $('body').terminal(function(command) {
+        return $.post('https://commando-server.herokuapp.com/cmd/'+ command);
+    });
+});
+
+</script>
+
+</body>
+</html>
